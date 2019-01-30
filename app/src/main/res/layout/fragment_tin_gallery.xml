@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <com.mindorks.placeholderview.SwipePlaceHolderView
+        android:id="@+id/swipeView"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/rejectBtn"
+        android:layout_marginBottom="15dp"
+        android:layout_height="0dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/guidline"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+        <ImageButton
+            android:id="@+id/rejectBtn"
+            android:layout_width="@dimen/fifty_dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="@id/guidline"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/ic_cancel"
+            android:tint="@color/gray" />
+
+        <ImageButton
+            android:id="@+id/acceptBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/guidline"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/ic_heart" />
+
+</android.support.constraint.ConstraintLayout>
